@@ -2,7 +2,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|integer|null: false|
+|body|integer||
 |image|string||
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
@@ -20,20 +20,18 @@
 |password|integer|null: false,|
 
 ### Association
-- has_many :messages
-- has_many :groups
+- has_many :messages, through: :groups_users
+- has_many :groups, through: :groups_users
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|messege_id|integer|null: false, foreign_key: true|
+|name|integer|null: false|
 
 ### Association
-- has_many :messages
-- has_many :users
+- has_many :messages, through: :groups_users
+- has_many :users, through: :groups_users
 
 ## groups_usersテーブル
 
