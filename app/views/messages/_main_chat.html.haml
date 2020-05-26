@@ -1,0 +1,37 @@
+.main-chat
+  .main-chat__group-info
+    .main-chat__group-info__left-box
+      .group-name
+        ="group-name"
+      .group-member
+        ="Member : group-member"
+    .main-chat__group-info__right-box
+      .edit
+        ="Edit"
+  .main-chat__messages
+    .message-items
+      .outline
+        .members-name
+          ="name"
+        .time-tag
+          ="  2019/11/20(Wed) 17:43:01"
+      .content
+        ="おはよう"
+    .message-items2
+      .outline2
+        .members-name2
+          ="name2"
+        .time-tag2
+          ="  2019/11/20(Wed) 17:43:34"
+      .content2
+        ="今日は夜から雨"
+  .main-chat__form
+    %form.flame
+      .text-form
+        %input{type: "text", placeholder:"type a message", class: "text-form"}
+        %label{class:"image-icon"}
+          %input{type: "file", class:"hidden"}
+          = icon('fas','image')
+    %input{type: "submit", value: "Send", class: "send-btn"}
+
+    
