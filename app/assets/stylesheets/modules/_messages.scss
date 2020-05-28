@@ -91,7 +91,6 @@
         justify-content: right;
         padding-top: 28px;
         padding-right: 40px;
-        text-decoration: none; 
         .edit{
         display: flex;
         height: 40px;
@@ -102,6 +101,10 @@
         align-items: center;
         justify-content: center;
         }
+          .edit_color{
+            color: #38aef0;
+            text-decoration: none; 
+          }
       }
     }
     &__messages{
