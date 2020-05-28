@@ -2,13 +2,14 @@
   .main-chat__group-info
     .main-chat__group-info__left-box
       .group-name
-        = "後回し"
+        = @group.name
       .group-member
-        = "Member : 後回し"
+        = @group.users.each do |user|
+          = user.name
     .main-chat__group-info__right-box
       .edit
         = link_to edit_group_path(current_user) do
-          ="Edit"
+          = "Edit"
   .main-chat__messages
     = render @messages
     
