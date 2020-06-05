@@ -4,6 +4,7 @@
       .group-name
         = @group.name
       .group-member
+        = "Member :"
         - @group.users.each do |user|
           = user.name
     .main-chat__group-info__right-box
