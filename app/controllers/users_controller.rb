@@ -12,8 +12,8 @@ class UsersController < ApplicationController
 
   def index
     return nil if params[:keyword] == ""
-    if params[:id]
-      @group = Group.find(params[:id])
+    if params[:group_id]
+      @group = Group.find(params[:group_id])
       user_ids = []
       @group.users.each do |user|
         user_ids << user.id
@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     end
     @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).where.not(id: user_ids).limit(10)
     respond_to do |format|
+      
       format.html
       format.json
     end
