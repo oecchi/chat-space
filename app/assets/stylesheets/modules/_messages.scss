@@ -53,7 +53,7 @@
           color:#ffffff;
           font-size: 11px;
           padding-top: 5px;
-          padding-bottom: 26px;
+          padding-bottom: 20px;
           text-decoration: none; 
         }
       }
@@ -104,8 +104,6 @@
       }
     }
     &__messages{
-      display: flex;
-      flex-direction: column;
       background-color: #fafafa;
       height : calc(100vh - 190px);
       padding-top: 35px;
@@ -114,7 +112,6 @@
         
       .outline{
         display: flex;
-        justify-content: row;
           .members-name{
             font-weight: bold;
             font-size: 16px;
@@ -131,6 +128,7 @@
           font-size: 14px;
           color: #434A54;
           padding-top: 12px;
+          margin-bottom: 46px;
         }
         &__image{
         }
